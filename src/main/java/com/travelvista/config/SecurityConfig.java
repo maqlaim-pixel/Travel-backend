@@ -260,7 +260,7 @@ public class SecurityConfig {
 
         // Your Vercel frontend
         config.setAllowedOrigins(List.of(
-            "https://frontend-travel-eyls-sigma.vercel.app"
+             "https://travel-frontend-xi-ten.vercel.app"
         ));
 
         // HTTP methods
