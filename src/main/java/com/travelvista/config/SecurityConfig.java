@@ -302,10 +302,12 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         // -----------------------------------------------------
-        // VERCEL FRONTEND
+        // ALLOWED FRONTENDS
         // -----------------------------------------------------
         config.setAllowedOrigins(List.of(
-            "https://travel-frontend-xi-ten.vercel.app"
+            "https://frontend-travel-eyls-ejn44br4r-dhavalmaqlaim-5177.vercel.app",
+            "http://localhost:5173",
+            "http://localhost:3000"
         ));
 
         // -----------------------------------------------------
@@ -324,6 +326,13 @@ public class SecurityConfig {
         // HEADERS
         // -----------------------------------------------------
         config.setAllowedHeaders(List.of("*"));
+
+        // -----------------------------------------------------
+        // EXPOSED HEADERS
+        // -----------------------------------------------------
+        config.setExposedHeaders(List.of(
+            "Authorization"
+        ));
 
         // -----------------------------------------------------
         // CREDENTIALS
